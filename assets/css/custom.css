@@ -1,0 +1,127 @@
+/* === OVERRIDE: SPRING BOOT THEME === */
+
+/* Color de acento principal (Verde Spring) */
+:root {
+    --spring-green: #6db33f;
+    --spring-dark: #2c3e50; /* Un gris azulado oscuro para contraste */
+}
+
+/* Títulos en Verde */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--spring-green) !important;
+}
+
+/* Líneas decorativas debajo de los títulos */
+h2.major:after {
+    background-color: var(--spring-green) !important;
+}
+
+/* Botones (Normal y Primary) */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button {
+    color: #ffffff !important;
+    box-shadow: inset 0 0 0 2px var(--spring-green) !important;
+}
+
+.button:hover {
+    background-color: rgba(109, 179, 63, 0.1) !important; /* Verde transparente al pasar el mouse */
+}
+
+.button.primary {
+    background-color: var(--spring-green) !important;
+    box-shadow: none !important;
+    color: #ffffff !important;
+}
+
+/* Iconos */
+.icon > .label {
+    display: none; /* Oculta el texto "Java", "Docker" para que solo se vean los logos limpios */
+}
+.icon:before {
+    color: var(--spring-green) !important;
+}
+
+/* Bordes de las imágenes (si queda alguno) */
+.image:before {
+    background-color: rgba(44, 62, 80, 0.8) !important; /* Fondo oscuro detrás de imágenes */
+}
+
+/* Links generales */
+a {
+    color: var(--spring-green) !important;
+    border-bottom-color: transparent !important; /* Quita el subrayado punteado por defecto */
+}
+a:hover {
+    color: #8ed65e !important; /* Un verde un poco más claro al pasar el mouse */
+}
+
+/* === FIX: SOLO IMÁGENES DE PROYECTOS (SECCIONES 2 Y 3) === */
+
+/* 1. Agrandar SOLO los contenedores de los proyectos (#two y #three) */
+#two .image, #three .image {
+    width: 50% !important; /* Le damos buen espacio (45%) */
+    border-radius: 0 !important; /* Cuadradas */
+    flex-basis: 50% !important;
+    background: none !important; /* Sin fondo gris */
+    overflow: hidden !important;
+}
+
+/* 2. Ajustar la imagen interna SOLO en proyectos */
+#two .image img, #three .image img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: fill !important;
+    border-radius: 0 !important;
+    transition: transform 0.5s ease !important;
+}
+
+/* 3. Ajustar el texto SOLO en proyectos para que no choque */
+#two .content, #three .content {
+    width: 55% !important;
+}
+
+/* 4. Ajuste para MÓVILES (Celular) SOLO en proyectos */
+@media screen and (max-width: 736px) {
+    #two, #three {
+        flex-direction: column !important;
+    }
+    #two .image, #three .image {
+        width: 100% !important;
+        margin: 0 0 2em 0 !important;
+    }
+    #two .content, #three .content {
+        width: 100% !important;
+    }
+}
+
+#two .image:hover img, #three .image:hover img {
+    transform: scale(1.1) !important; /* Aumenta tamaño al 110% */
+}
+
+/* === FIX: MENÚ LEGIBLE (ACCESIBILIDAD) === */
+
+/* 1. Estado normal: Letra blanca y opacidad total */
+#menu .links li a {
+    color: #ffffff !important;      /* Blanco puro */
+    opacity: 1 !important;          /* Quitamos cualquier transparencia */
+    font-weight: 600 !important;    /* Hacemos la letra un poquito más gruesa */
+    border: none !important;        /* Quitamos bordes raros si los hay */
+}
+
+/* 2. Estado Hover (al pasar el mouse): Se pone verde */
+#menu .links li a:hover {
+    color: var(--spring-green) !important;
+    background-color: rgba(255, 255, 255, 0.05) !important; /* Un fondo muy sutil */
+}
+
+/* 3. El botón de cerrar (la X) también visible */
+#menu .close {
+    color: #ffffff !important;
+    opacity: 0.8 !important;
+}
+#menu .close:hover {
+    color: var(--spring-green) !important;
+    opacity: 1 !important;
+}
