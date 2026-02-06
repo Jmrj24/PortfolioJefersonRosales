@@ -26,4 +26,31 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     
     console.log("Custom JS cargado: Enlaces externos configurados para abrir en nueva pestaña.");
+    /* =========================================
+       LOGICA TOGGLE EDUCACIÓN ("VER MÁS")
+       ========================================= */
+    const btnEducation = document.getElementById('btn-toggle-education');
+    const extraEducation = document.getElementById('extra-education');
+
+    if (btnEducation && extraEducation) {
+        btnEducation.addEventListener('click', function(e) {
+            e.preventDefault(); // Evita que salte la página
+
+            // Si está oculto, lo mostramos
+            if (!extraEducation.classList.contains('show')) {
+                extraEducation.classList.add('show');
+                btnEducation.innerText = "Ver menos"; // Cambiamos texto
+                btnEducation.classList.add('primary'); // (Opcional) Lo pintamos verde
+            } 
+            // Si está visible, lo ocultamos
+            else {
+                extraEducation.classList.remove('show');
+                btnEducation.innerText = "Ver más formaciones"; // Restauramos texto
+                btnEducation.classList.remove('primary'); // Quitamos verde
+                
+                // Opcional: Scrollear un poquito hacia arriba para que no se pierda el usuario
+                document.getElementById('education').scrollIntoView({behavior: 'smooth'});
+            }
+        });
+    }
 });

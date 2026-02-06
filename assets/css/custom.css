@@ -125,3 +125,158 @@ a:hover {
     color: var(--spring-green) !important;
     opacity: 1 !important;
 }
+
+/* --- SECCIÓN EDUCACIÓN (Toggle) --- */
+
+/* Clase para ocultar contenido inicialmente */
+.hidden-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Animación suave */
+}
+
+/* Clase para mostrar con animación */
+.hidden-content.show {
+    display: block;
+    animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ajuste visual para la tabla */
+#education table td b {
+    font-weight: 600; /* Resaltar los títulos importantes */
+}
+
+/* =================================================
+   FIX DEFINITIVO: ICONOS TABLA EDUCACIÓN
+   ================================================= */
+
+/* ESTADO NORMAL (Gris y Quieto) */
+/* Usamos la ruta completa para ganarle a cualquier otra regla */
+section#education .table-wrapper table td a.icon {
+    font-size: 1.2em !important;
+    /* CLAVE PARA EL ZOOM: Convertirlo en bloque para que pueda crecer */
+    display: inline-block !important; 
+    
+    /* COLOR: Gris claro para que se note que está "apagado" */
+    color: #b2bec3 !important; 
+    
+    /* Limpieza */
+    border-bottom: none !important;
+    text-decoration: none !important;
+    
+    /* Velocidad de la animación */
+    transition: all 0.2s ease-in-out !important;
+}
+
+/* ESTADO HOVER (Verde y Grande) */
+section#education .table-wrapper table td a.icon:hover {
+    /* COLOR: Tu verde Spring Boot */
+    color: #6db33f !important; 
+    
+    /* ZOOM: Aumenta un 30% */
+    transform: scale(1.3) !important; 
+    
+    /* Un brillo extra opcional */
+    text-shadow: 0 0 8px rgba(109, 179, 63, 0.6);
+}
+
+/* =================================================
+   FIX ALINEACIÓN TABLAS DE EDUCACIÓN
+   ================================================= */
+
+/* 1. Obligamos a la tabla a respetar medidas fijas */
+#education table {
+    table-layout: fixed !important; 
+    width: 100% !important;
+}
+
+/* 2. Asignamos porcentajes exactos a cada columna (1, 2, 3 y 4) */
+
+/* Columna 1: Título (Le damos buen espacio) */
+#education table th:nth-child(1), 
+#education table td:nth-child(1) { 
+    width: 35% !important; 
+}
+
+/* Columna 2: Institución (La más ancha para nombres largos) */
+#education table th:nth-child(2), 
+#education table td:nth-child(2) { 
+    width: 40% !important; 
+}
+
+/* Columna 3: Año (Pequeña y centrada) */
+#education table th:nth-child(3), 
+#education table td:nth-child(3) { 
+    width: 15% !important; 
+    text-align: center !important;
+}
+
+/* Columna 4: Icono (Muy pequeña y centrada) */
+#education table th:nth-child(4), 
+#education table td:nth-child(4) { 
+    width: 10% !important; 
+    text-align: center !important;
+}
+
+/* =========================================
+   ICONOS EN EL HEADER (Estilo "Banner")
+   ========================================= */
+
+/* 1. Alineación del contenedor */
+#header nav {
+    display: flex;
+    align-items: center; /* Centrados verticalmente */
+    justify-content: flex-end; /* Pegados a la derecha */
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 0 !important;
+    margin-right: 15px; /* Separación con la palabra "Menú" */
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3); /* Una línea sutil separadora */
+}
+
+/* 2. Estilo de los Iconos (El look que te gustó) */
+.header-icons a.icon {
+    width: auto !important; 
+    min-width: 0 !important;
+
+    margin: 0 6px !important;
+
+    font-size: 1.3em; /* TAMAÑO GRANDE (igual que en el banner) */
+    color: rgba(255, 255, 255, 0.6); /* Blanco semi-transparente (apagado) */
+    text-decoration: none;
+    border: none !important;
+
+    background: none !important; /* Por si tiene fondo heredado */
+    padding: 0 !important;
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+/* 3. Efecto "Luminosidad" al pasar el mouse */
+.header-icons a.icon:hover {
+    color: #ffffff; /* Blanco puro brillante */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* El BRILLO que te gustó */
+    transform: scale(1.1); /* Un pequeño zoom sutil */
+    opacity: 1;
+}
+
+/* Opcional: Ocultar en celulares para que no se amontone con el logo */
+@media screen and (max-width: 736px) {
+    .header-icons {
+        display: none;
+    }
+}
+
+/* Arreglo para el icono del botón en el Footer */
+#footer .button.icon:before {
+    color: #ffffff !important; /* Icono BLANCO a la fuerza */
+    opacity: 1 !important;     /* Que se vea sólido */
+}
