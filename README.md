@@ -21,10 +21,10 @@ Este portafolio sirve como punto central para presentar mi carrera profesional. 
 
 Aunque mi especialidad es el Backend (Java/Spring), este sitio estático fue construido con:
 
-* **HTML5 Semántico**
-* **CSS3** (Personalización profunda de estilos)
-* **JavaScript (Vanilla)** (Manejo del DOM y lógica de interacción)
-* **FontAwesome** (Iconografía)
+* **HTML5**
+* **CSS3** 
+* **JavaScript**
+* **FontAwesome**
 
 ## 🚀 Instalación / Ejecución Local
 
@@ -32,7 +32,7 @@ Si deseas clonar y ver este proyecto en tu máquina local:
 
 1.  **Clonar el repositorio:**
     ```bash
-    git clone [https://github.com/Jmrj24/PortfolioJefersonRosales.git](https://github.com/Jmrj24/PortfolioJefersonRosales.git)
+    git clone [https://github.com/Jmrj24/PortfolioJefersonRosales.git]
     ```
 2.  **Abrir el proyecto:**
     Simplemente abre el archivo `index.html` en tu navegador de preferencia. No requiere instalación de dependencias ni servidores de backend.
@@ -55,4 +55,4 @@ Si te interesa mi perfil o quieres colaborar en algún proyecto:
 * **Email:** [jeferson24j@gmail.com](mailto:jeferson24j@gmail.com)
 
 ---
-*Desarrollado con ❤️ y mucho Café ☕ por Jeferson Rosales.*
+*Desarrollado por Jeferson Rosales.*
