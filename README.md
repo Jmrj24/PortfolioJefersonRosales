@@ -3,7 +3,7 @@
 ¡Bienvenido al repositorio de mi portafolio profesional!
 Este proyecto es una web personal diseñada para mostrar mi experiencia, habilidades y proyectos como **Desarrollador Backend Java**.
 
-🔗 **Ver Online:** [https://TU-USUARIO.github.io/TU-REPO](https://TU-USUARIO.github.io/TU-REPO)
+🔗 **Ver Online:** [https://jmrj24.github.io/PortfolioJefersonRosales/](https://jmrj24.github.io/PortfolioJefersonRosales/)
 
 ---
 
@@ -32,7 +32,7 @@ Si deseas clonar y ver este proyecto en tu máquina local:
 
 1.  **Clonar el repositorio:**
     ```bash
-    git clone [https://github.com/TU-USUARIO/TU-REPO.git](https://github.com/TU-USUARIO/TU-REPO.git)
+    git clone [https://github.com/Jmrj24/PortfolioJefersonRosales.git](https://github.com/Jmrj24/PortfolioJefersonRosales.git)
     ```
 2.  **Abrir el proyecto:**
     Simplemente abre el archivo `index.html` en tu navegador de preferencia. No requiere instalación de dependencias ni servidores de backend.
@@ -51,8 +51,8 @@ Este proyecto es una personalización basada en la plantilla **"Solid State"** d
 
 Si te interesa mi perfil o quieres colaborar en algún proyecto:
 
-* **LinkedIn:** [Tu Perfil](LINK_A_LINKEDIN)
-* **Email:** [tuemail@gmail.com](mailto:tuemail@gmail.com)
+* **LinkedIn:** [Jeferson Rosales](https://www.linkedin.com/in/jmrj24/)
+* **Email:** [jeferson24j@gmail.com](mailto:jeferson24j@gmail.com)
 
 ---
 *Desarrollado con ❤️ y mucho Café ☕ por Jeferson Rosales.*
